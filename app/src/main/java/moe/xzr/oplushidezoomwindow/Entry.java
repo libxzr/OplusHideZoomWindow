@@ -66,7 +66,7 @@ public class Entry implements IXposedHookLoadPackage {
                         Object windowState = XposedHelpers.callMethod(
                                 param.thisObject, "getTopVisibleAppMainWindow");
                         Object activityRecord = XposedHelpers.callMethod(
-                                param.thisObject, "getTopResumedActivity");
+                                param.thisObject, "getTopVisibleActivity");
                         Object rootWindowContainer = XposedHelpers.getObjectField(
                                 param.thisObject, "mRootWindowContainer");
                         XposedHelpers.callMethod(windowState, "destroySurfaceUnchecked");
