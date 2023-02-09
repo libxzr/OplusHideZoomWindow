@@ -42,6 +42,8 @@ public class Entry implements IXposedHookLoadPackage {
                                 "OplusOSZoomFloatHandleView".equals(typeName) ||
                                 // Screenshot preview
                                 "com.oplus.screenshot/LongshotCapture".equals(typeName) ||
+                                // All apps view of edge panel
+                                "com.coloros.smartsidebar".equals(typeName) ||
                                 // IME
                                 "InputMethod".equals(typeName)) {
                             int flags = (int) param.args[2];
